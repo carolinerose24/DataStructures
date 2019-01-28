@@ -22,5 +22,23 @@ public:
     void setDAta(Type data);
 };
 
+//Template definitions
 
+template < class Type>
+Node :: Node (Type data)
+{
+    this->data = data;
+}
+
+template <class Type>
+Type Node :: getData(); //GETTER
+{
+    return data;
+}
+
+template <class Type>
+void Node<Type> :: setData(Type data) //SETTER (-> instead of .)
+{
+    this->data = data; //-> is a selector operator that works like a . on objects -- just for pointers though
+}
 #endif /* Node_h */
