@@ -17,12 +17,18 @@ class Node
 private:
     Type data;
 public:
+    Node();
     Node(Type data);
     Type getData();
     void setDAta(Type data);
 };
 
 //Template definitions
+
+template <class Type> //constructor but we won't use it
+Node<Type> :: Node() //for compilation purposes
+{} //w/o parameters
+
 
 template < class Type>
 Node :: Node (Type data)
