@@ -49,7 +49,7 @@ LinearNode<Type> * LinearNode<Type> :: getNext()
 }
 
 template <class Type>
-void LinearNode<Type> :: setNext(LinearNode<Type> * next)
+void LinearNode<Type> :: setNext(LinearNode<Type> * next) //points to next node?
 {
     this->next = next;
 }
@@ -62,6 +62,13 @@ void LinearNode<Type> :: setNext(LinearNode<Type> * next)
 //*getFromIndex (int):Type
 //*setAtIndex(int, Type)
 //*getSize(): int()
+
+
+// a node is a bucket that can hold things and hook it to other things
+//put things inside (types)
+//for structural organization
+//colon means 'of type' in uml
+
 
 
 #endif /* LinearNode_h */    //Linear node is like Node but has NEXT
