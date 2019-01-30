@@ -91,7 +91,7 @@
 		AB39BB0921FF5BE700B7B17C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AB39BB1121FF60F200B7B17C /* Node.hpp */,
+				ABFFA3022201F0C000EB979C /* Nodes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +101,14 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		ABFFA3022201F0C000EB979C /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AB39BB1121FF60F200B7B17C /* Node.hpp */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

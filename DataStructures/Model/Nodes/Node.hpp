@@ -20,7 +20,7 @@ public:
     Node();
     Node(Type data);
     Type getData();
-    void setDAta(Type data);
+    void setData(Type data);
 };
 
 //Template definitions
@@ -30,14 +30,14 @@ Node<Type> :: Node() //for compilation purposes
 {} //w/o parameters
 
 
-template < class Type>
-Node :: Node (Type data)
+template <class Type>
+Node<Type> :: Node (Type data)
 {
     this->data = data;
 }
 
 template <class Type>
-Type Node :: getData(); //GETTER
+Type Node<Type> :: getData() //GETTER
 {
     return data;
 }
