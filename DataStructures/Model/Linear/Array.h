@@ -72,14 +72,14 @@ Array<Type> :: ~Array()
     delete [] internalArray;
 }
 
-template <class Type> //Operators
+template <class Type> //Operators: my array -> shove into array (TO SET THE ENTIRE ARRAY)
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 {
-    if (&toAssign != this)
+    if (&toAssign != this) //is it what I am talking about?
     {
         if (size != toAssign.getSize())
         {
-            delete [] internalArray;
+            delete [] internalArray; //if no, delete old and fill it with mine
             size = toAssign.getSize();
             internalArray = new Type [size];
         }
