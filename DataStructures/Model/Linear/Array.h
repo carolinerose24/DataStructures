@@ -74,8 +74,8 @@ Array<Type> :: ~Array()
 
 template <class Type> //Operators: my array -> shove into array (TO SET THE ENTIRE ARRAY)
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
-{
-    if (&toAssign != this) //is it what I am talking about?
+{ //IT MAKES THE = OPERATOR WORK FOR THING you MAKE
+    if (&toAssign != this) //is it what I am talking about? CHECKS ADDRESS (if they are the same)
     {
         if (size != toAssign.getSize())
         {
