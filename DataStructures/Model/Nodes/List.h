@@ -9,7 +9,7 @@
 #ifndef List_h
 #define List_h
 #include <assert.h>
-#include "LinearNode.h"
+//#include "LinearNode.h"
 //OR
 #include "../../Nodes/LinearNode.hpp"
 
