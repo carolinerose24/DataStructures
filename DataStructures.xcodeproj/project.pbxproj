@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB39BB0E21FF5D8100B7B17C /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB39BB0C21FF5D8100B7B17C /* Controller.cpp */; };
 		AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */; };
+		AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5BE48922049F46005B8C6B /* LinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		AB39BB1121FF60F200B7B17C /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		AB5BE45322049567005B8C6B /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		AB5BE48922049F46005B8C6B /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		ABFFA3032201F8E800EB979C /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
 		ABFFA3052202061500EB979C /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				ABFFA3052202061500EB979C /* Array.h */,
+				AB5BE48922049F46005B8C6B /* LinkedList.cpp */,
+				AB5BE48A22049F46005B8C6B /* LinkedList.hpp */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB39BB0E21FF5D8100B7B17C /* Controller.cpp in Sources */,
+				AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */,
 				AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
