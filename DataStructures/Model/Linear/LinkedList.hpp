@@ -14,7 +14,7 @@
 
 using namespace std;
 
-class LinkedList
+class LinkedList : public List<Type>
 {
 protected:
     LinearNode<Type> * front;
