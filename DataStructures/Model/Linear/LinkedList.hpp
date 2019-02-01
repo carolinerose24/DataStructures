@@ -9,7 +9,7 @@
 #ifndef LinkedList_hpp
 #define LinkedList_hpp
 
-#include "List.hpp"
+#include "List.h"
 #include <stdio.h>
 
 using namespace std;

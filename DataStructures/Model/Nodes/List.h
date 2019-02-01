@@ -9,9 +9,11 @@
 #ifndef List_h
 #define List_h
 #include <assert.h>
+#include "LinearNode.h"
+//OR
 #include "../../Nodes/LinearNode.hpp"
 
-class List
+class List //: public List<Type>
 {
 protected:
     int size;
