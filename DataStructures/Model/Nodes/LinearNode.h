@@ -19,9 +19,9 @@ private:
 public: //points to another Linear Node next to it
     LinearNode();
     LinearNode(Type data);
-    LinearNode(Type data, LinearNode<Type> * next)
+    LinearNode(Type data, LinearNode<Type> * next);
     LinearNode<Type> * getNext();
-    void setNext(LinearNode<Type> * next)
+    void setNext(LinearNode<Type> * next);
 };
 
 //implementation of templates
