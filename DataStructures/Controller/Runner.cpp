@@ -8,11 +8,15 @@
 
 #include <iostream>
 #include "Controller.hpp"
+#include "Timer.hpp"
 
 int main()
 {
     Controller app;
     app.start();
+    
+    Timer app1;
+    app1.start();
     
    
 }

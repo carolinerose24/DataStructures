@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB39BB0E21FF5D8100B7B17C /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB39BB0C21FF5D8100B7B17C /* Controller.cpp */; };
 		AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */; };
+		AB4477862209DD69007DDAE3 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4477842209DD69007DDAE3 /* Timer.cpp */; };
 		AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5BE48922049F46005B8C6B /* LinkedList.cpp */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,8 @@
 		AB39BB0D21FF5D8100B7B17C /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
 		AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Runner.cpp; sourceTree = "<group>"; };
 		AB39BB1121FF60F200B7B17C /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		AB4477842209DD69007DDAE3 /* Timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		AB4477852209DD69007DDAE3 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
 		AB5BE45322049567005B8C6B /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		AB5BE48922049F46005B8C6B /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 		AB39BB0821FF5BE000B7B17C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AB4477832209DD3E007DDAE3 /* Tools */,
 				AB39BB0C21FF5D8100B7B17C /* Controller.cpp */,
 				AB39BB0D21FF5D8100B7B17C /* Controller.hpp */,
 				AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */,
@@ -108,6 +112,15 @@
 			children = (
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB4477832209DD3E007DDAE3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				AB4477842209DD69007DDAE3 /* Timer.cpp */,
+				AB4477852209DD69007DDAE3 /* Timer.hpp */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		ABFFA3022201F0C000EB979C /* Nodes */ = {
@@ -189,6 +202,7 @@
 				AB39BB0E21FF5D8100B7B17C /* Controller.cpp in Sources */,
 				AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */,
 				AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */,
+				AB4477862209DD69007DDAE3 /* Timer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
