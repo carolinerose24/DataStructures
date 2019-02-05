@@ -9,13 +9,17 @@
 #ifndef FileController_hpp
 #define FileController_hpp
 
+#include "../../Resources/CrimeData.hpp"
+#include "../Resources/Music.hpp"
+
 #include <stdio.h>
-//#include "../Resources/Music.hpp"
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <vector>
 #include <sstream>
+
+
 
 
 using namespace std;
