@@ -12,6 +12,7 @@
 #include "List.h"
 #include <stdio.h>
 
+
 using namespace std;
 
 class LinkedList : public List<Type>
@@ -38,7 +39,7 @@ public:
 
 };
 
-template <class Type>
+template <class Type> //can put anything inside of it
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
@@ -52,7 +53,7 @@ LinkedList<Type> :: ~LinkedList()
     LinearNode<Type> * destroyStructure = front;
     while (fornt != nullptr)
     {
-        front = destroyStructure -> getNextNode();
+        front = destroyStructure -> getNextNode(); //loop through node and delete memory allocations
         delete destroyStructure;
         destroyStructure = front;
     }
@@ -63,13 +64,13 @@ void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
     
-    if(this->size == 0)
+    if(this->size == 0) //add method
     {
         this->front = newData;
     }
     else
     {
-        this->end->setNextNode(newData);
+        this->end->setNextNode(newData); //point the last node to the new data
     }
     
     this->end = newData;

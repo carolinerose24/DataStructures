@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>290</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+
+--
+- data : Type
+
+--
++ Node&lt;Type&gt;(): constsructor
++ Node&lt;Type&gt;(Type): constructor
+
++ getData() : Type
++ setData(Type) : void
+//+ getNext() : Node&lt;Type&gt; *
+//+ setNext(Node&lt;Type&gt; *) : void
+
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>540</y>
+      <w>420</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>LinearNode&lt;Type&gt;
+
+--
+- next : Node&lt;Type&gt; *
+
+--
+LinearNode&lt;Type&gt;(): constructor
+LinearNode&lt;Type&gt;(Type) : constructor
+LinearNode&lt;Type&gt;(Type, LinearNode&lt;Type&gt;) : constructor
+
++ getNext() : Node&lt;Type&gt; *
++ setNext(Node&lt;Type&gt; *) : void
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>450</y>
+      <w>100</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>0</y>
+      <w>210</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Control Structure Nodes
+bg=none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>250</y>
+      <w>380</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Array&lt;Type&gt;
+--
+- size : int
+- internalArray : Type*
+
+--
++ Array&lt;Type&gt;(int) : constructor
++ Array&lt;Type&gt;(Array&lt;Type&gt;) : construtor
++ getSize() : int
++ setAtIndex(int,Type) : void
++ getFromIndex(int) : Type
++ operator [] 
++ operator = Array&lt;Type&gt; &amp;
++ ~Array(): destructor
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>80</x>
+      <y>50</y>
+      <w>280</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Note:
+operators tell the arrays how 
+to use []'s
+[] copies array
+= assigns
+
+Array of type is made of linear nodes
+Type is any kind of thing
+Diamond arrow -&gt; made up of
+destructor destroys memory allocation
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>780</y>
+      <w>290</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>/List&lt;Type&gt;/
+--
+# size : int
+
+--
+*List Structure Methods*
+/getFromIndex(int) : Type/
+/add(TypE) : void/
+/addAtIndex(int,Type) : void/
+/remove(int) : Type/
+*List Accessors*
+/getSize() : int/
+/getFront() : LinearNode&lt;Type&gt; */
+/getEnd() : LindearNode&lt;Type&gt; */</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>590</y>
+      <w>320</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Italic because not implemented
+just framework
+Filled in diamond-&gt; composed of/made up of
+Inherit arrow solid
+composed filled Diamon
+has relationship
+bg=none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>1060</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>LinkedList&lt;Type&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>1060</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Queue&lt;Type&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>1060</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Stack&lt;Type&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>990</y>
+      <w>380</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;10.0;360.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>740</x>
+      <y>990</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>990</y>
+      <w>350</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>610</y>
+      <w>200</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;170.0</additional_attributes>
+  </element>
+</diagram>
