@@ -13,7 +13,7 @@
 #include <stdio.h>
 
 
-using namespace std;
+using namespace std; //~ is for the destructor
 
 class LinkedList : public List<Type>
 {
@@ -35,7 +35,7 @@ public:
     Type getFromIndex(int index);
     Type remove(int index);
     //Type setAtIndex(int index, Type item);
-    //bool contains(Type item);
+    bool contains(Type item);
 
 };
 
@@ -116,11 +116,11 @@ Type LinkedList<Type> :: getFromIndex(int index)
 {
     assert(index >= = && index < this->size);
     Type data:
-    LinearNode<Type> * current = front;
+    LinearNode<Type> * current = front; //start at beginning
     
     for (int position = 0; position < index; position++)
     {
-        current = current->getNextNode();
+        current = current->getNextNode(); //current node calling method get next node
     }
     
     data = current -> getData();
@@ -152,21 +152,21 @@ Type LinkedList<Type> :: remove (int index)
         }
         
         toBeRemoved = current;
-        if(index == this->size - 1)
+        if(index == this->size - 1) //to prevent out of bounds
         {
             previous ->setNextNode(nullptr);
             end = previous;
         }
         else
         {
-            current = toBeRemoved -> getNExtNode();
+            current = toBeRemoved -> getNextNode();
             previous->setNextNode(current);
         }
     }
     this->size -= 1;
     
     removedData = toBeRemoved->getData();
-    delete toBeRemoved;
+    delete toBeRemoved; //find data you want gone, then delete it
     return removedData;
 }
 
@@ -188,6 +188,25 @@ int LinkedList<Type>  :: getSize() const
     return this->size;
 }
 
+
+template <class Type>
+bool LinkedList<Type> :: contains(Type thingToFind)
+{
+    bool exists = false;
+    
+    LinearNode<Type> * searchPointer = front;
+    for (int index = 0; index < this->size; index++)
+    {
+        if (searchPointer->getData() == thingToFind) ==no .equals method
+        {
+            exists = true;
+            //or put return true here which leaves the method
+        }
+        searchPointer = searchPointer->getNextNode();
+    }
+    
+    return exists;
+}
 
 //template <class Type>
 //class LinkedList : public List<Type>

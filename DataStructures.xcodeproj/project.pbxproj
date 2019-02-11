@@ -11,7 +11,6 @@
 		AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB39BB0F21FF5EAD00B7B17C /* Runner.cpp */; };
 		AB4477862209DD69007DDAE3 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4477842209DD69007DDAE3 /* Timer.cpp */; };
 		AB4477892209E2DE007DDAE3 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4477872209E2DE007DDAE3 /* FileController.cpp */; };
-		AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5BE48922049F46005B8C6B /* LinkedList.cpp */; };
 		AB85119D220C79C5006DB879 /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB85119C220C79C5006DB879 /* Music.cpp */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		AB4477922209F39E007DDAE3 /* music.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = music.csv; path = ../../../../../Downloads/music.csv; sourceTree = "<group>"; };
 		AB4477932209F39E007DDAE3 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Downloads/Music.hpp; sourceTree = "<group>"; };
 		AB5BE45322049567005B8C6B /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
-		AB5BE48922049F46005B8C6B /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		AB85119C220C79C5006DB879 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Music.cpp; path = ../../../../../Downloads/Music.cpp; sourceTree = "<group>"; };
 		AB85119E220C84EF006DB879 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				ABFFA3052202061500EB979C /* Array.h */,
-				AB5BE48922049F46005B8C6B /* LinkedList.cpp */,
 				AB5BE48A22049F46005B8C6B /* LinkedList.hpp */,
 				AB85119E220C84EF006DB879 /* List.h */,
 			);
@@ -220,7 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB39BB0E21FF5D8100B7B17C /* Controller.cpp in Sources */,
-				AB5BE48B22049F46005B8C6B /* LinkedList.cpp in Sources */,
 				AB4477892209E2DE007DDAE3 /* FileController.cpp in Sources */,
 				AB85119D220C79C5006DB879 /* Music.cpp in Sources */,
 				AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */,
