@@ -27,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB09990B2211D5530077B42E /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		AB09990C2211D5720077B42E /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		AB39BAFD21FF5B5400B7B17C /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB39BB0B21FF5C5500B7B17C /* FirstClassCPPUmlet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = FirstClassCPPUmlet.pdf; sourceTree = "<group>"; };
 		AB39BB0C21FF5D8100B7B17C /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
@@ -156,6 +158,8 @@
 				ABFFA3052202061500EB979C /* Array.h */,
 				AB5BE48A22049F46005B8C6B /* LinkedList.hpp */,
 				AB85119E220C84EF006DB879 /* List.h */,
+				AB09990B2211D5530077B42E /* Queue.h */,
+				AB09990C2211D5720077B42E /* Stack.h */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
