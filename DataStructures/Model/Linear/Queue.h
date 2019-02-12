@@ -78,7 +78,7 @@ void Queue<Type> :: addAtIndex(int index, Type item)
 template <class Type>
 void Queue<Type> :: add(Type item)
 {
-    enqueue(item);
+    enqueue(item);//adds a value
 }
 
 template <class Type>
@@ -102,7 +102,7 @@ template <class Type>
 Type Queue<Type> :: remove(int index)
 {
     assert(index == 0);
-    return dequeue();
+    return dequeue(); //removes a value
 }
 
 template <class Type>
