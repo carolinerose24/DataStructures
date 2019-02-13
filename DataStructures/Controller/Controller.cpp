@@ -23,6 +23,8 @@ void Controller:: usingNodes()
     wordHolder.setData("replaced text");
     cout << wordHolder.getData() << endl;
     
+    cout << "I keep it poppin" << endl;
+    
 }
 
 void Controller :: testFiles()

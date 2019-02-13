@@ -25,8 +25,7 @@ private:
     void testFiles();
 public:
     void start();
-    
-    
+
 };
 
 

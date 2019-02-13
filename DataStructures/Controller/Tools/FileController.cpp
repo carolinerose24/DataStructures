@@ -8,6 +8,12 @@
 
 #include "FileController.hpp"
 
+#include "../Model/Linear/Array.h"
+#include "../Model/Linear/LinkedList.hpp"
+
+#include <sstream>
+
+
 vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
 {
     std :: vector<CrimeData> crimeVector;
@@ -87,3 +93,83 @@ vector<Music> FileController :: musicDataToVector(string filename)
     return musicVector;
 }
 
+
+
+LinkedList<CrimeData> FileController :: readDataToList(string fileName)
+{
+    LinkedList<CrimeData> crimes;
+    
+    string currentCVSLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(fileName);
+    
+    //if the file exists at that path
+    if (dataFile.is_open())
+    {
+        //keep reading until you are at the end of the file
+        while (!dataFile.eof())
+        {
+            //grab each line from the CSV separated by the carriage return character
+            getline(dataFile, currentCVSLine. '\r');
+            //exclude header row
+            if (rowCount != 0)
+            {
+                //create a CrimeData instance from the line. exclude a blank line (usually if opened separately)
+                if (currentCVSLine.length() != 0)
+                {
+                    CrimeData row(currentCVSLine);
+                    crimes.add(row);
+                    
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close()
+    }
+   else
+   {
+       cerr << "NO FILE" << endl;
+   }
+    return crimes;
+}
+
+
+LinkedList<Music> FileController :: musicDataToList(string fileName)
+{
+    LinkedList<Music> musicList;
+    
+    string currentCVSLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(fileName);
+    
+    //if the file exists at that path
+    if (dataFile.is_open())
+    {
+        //keep reading until you are at the end of the file
+        while (!dataFile.eof())
+        {
+            //grab each line from the CSV separated by the carriage return character
+            getline(dataFile, currentCVSLine. '\r');
+            //exclude header row
+            if (rowCount != 0)
+            {
+                //create a CrimeData instance from the line. exclude a blank line (usually if opened separately)
+                if (currentCVSLine.length() != 0)
+                {
+                    Music row(currentCVSLine);
+                    musicList.add(row);
+                    
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close()
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    return musicList;
+}

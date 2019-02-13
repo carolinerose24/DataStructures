@@ -9,7 +9,7 @@
 #ifndef List_h
 #define List_h
 
-#include "../Nodes/LinearNodes.hpp"
+#include "../Nodes/LinearNode.h"
 
 template <class Type>
 class List

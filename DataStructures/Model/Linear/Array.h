@@ -53,7 +53,7 @@ Array<Type> :: Array(int size)
 }
 
 template <class Type> //COPY constructor
-Arra<Type> :: Array(const Array<Type> & to Copy)
+Array<Type> :: Array(const Array<Type> & toCopy)
 {
     this->size = toCopy.getSize();
     
