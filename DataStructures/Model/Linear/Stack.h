@@ -37,7 +37,7 @@ Stack<Type> :: Stack : LinkedList<Type>()
 }
 
 template <class Type>
-Stack<Type> :: ~Stack()
+Stack<Type> :: ~Stack() //destructor-> called by the compiler at the end
 {
     while(this->size > 0)
     {
@@ -91,7 +91,7 @@ Type Stack<Type> :: pop()
 }
 
 template <class Type>
-Type Stack<Type> :: remove(int index)
+Type Stack<Type> :: remove(int index) //have to have, but just calls pop
 {
     assert(index == 0);
     return pop();
@@ -110,5 +110,19 @@ Type Stack<Type> :: getFromIndex(int index)
     assert(index==0);
     return peek();
 }
+
+
+//Stack notes
+//Add at zero, zero points to next
+//Have to destroy the stack to get to the bottom of it
+
+//Stack<Lego> myStack; //no parens
+//myStack push(lego1);
+
+
+//remove at zero
+//add at end
+
+HAVE TO HAVE ADD AT INDEX/OTHER LIST METHODS
 
 #endif /* Stack_h */

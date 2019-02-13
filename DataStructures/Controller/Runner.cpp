@@ -15,8 +15,8 @@ int main()
     Controller app;
     app.start();
     
-    Timer app1;
-    app1.start();
+   // Timer app1;
+    //app1.start();
     
    
 }

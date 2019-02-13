@@ -27,18 +27,18 @@ void Controller:: usingNodes()
 
 void Controller :: testFiles()
 {
-    vector<int> Vectorrr;
-    
-//    for (int i = 0; i < Vectorrr.length; i ++)
+//    vector<int> Vectorrr;
+//    
+////    for (int i = 0; i < Vectorrr.length; i ++)
+////    {
+////
+////    }
+//    
+//    for (auto i = Vectorrr.begin(); i != Vectorrr.end(); ++i)
 //    {
-//
+//        cout << *i << endl;
 //    }
-    
-    for (auto i = Vectorrr.begin(); i != Vectorrr.end(); ++i)
-    {
-        cout << *i << endl;
-    }
-    
-    cout << index << ": contents are: " << Vectorrr[index] << endl;
-    
+//    
+//    cout << index << ": contents are: " << Vectorrr[index] << endl;
+//    
 }
