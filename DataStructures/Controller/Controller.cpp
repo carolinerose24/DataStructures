@@ -11,7 +11,7 @@
 void Controller :: start()
 {
     cout << "This is the data structures app" << endl;
-    usingNodes();
+    testLinear();
 }
 
 void Controller:: usingNodes()
@@ -26,6 +26,17 @@ void Controller:: usingNodes()
     cout << "I keep it poppin" << endl;
     
 }
+
+void Controller :: testLinear()
+{ //these are put on the stack
+    linearTester lookieHere;
+    lookieHere.testVsSTL();
+    
+} //destructed after this ends (popped off the stack)
+
+
+
+
 
 void Controller :: testFiles()
 {

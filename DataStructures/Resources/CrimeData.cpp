@@ -8,6 +8,11 @@
 
 #include "CrimeData.hpp"
 
+CrimeData :: CrimeData()
+{
+    //default constructor -> for compilation
+}
+
 CrimeData :: CrimeData(string currentCSVLine)
 {
     stringstream parseCSV(currentCSVLine);
