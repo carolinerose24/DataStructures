@@ -11,11 +11,12 @@
 
 
 #include "List.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 
 using namespace std; //~ is for the destructor
 
+template <class Type>
 class LinkedList : public List<Type>
 {
 protected:
@@ -30,11 +31,12 @@ public:
     int getSize() const;
     LinearNode<Type> * getFront();
     LinearNode<Type> * getEnd();
+   
     //Structure methods
-    void add(Type item);
-    void addAtIndex(int index, Type item);
-    Type getFromIndex(int index);
-    Type remove(int index);
+//    void add(Type item);
+//    void addAtIndex(int index, Type item);
+//    Type getFromIndex(int index);
+//    Type remove(int index);
     
     //for the stack, allows us to override these methods in a subclass
     virtual void add(Type item);
@@ -60,7 +62,7 @@ template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
-    while (fornt != nullptr)
+    while (front != nullptr)
     {
         front = destroyStructure -> getNextNode(); //loop through node and delete memory allocations
         delete destroyStructure;
@@ -89,7 +91,7 @@ void LinkedList<Type> :: add(Type item)
 template <class Type>
 void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
-    assert(index >= 0 && index <= this->size)
+    assert(index >= 0 && index <= this->size);
     if (index == this->size)
     {
         add(item);
@@ -123,8 +125,8 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
 template <class Type>
 Type LinkedList<Type> :: getFromIndex(int index)
 {
-    assert(index >= = && index < this->size);
-    Type data:
+    assert(index >= 0 && index < this->size);
+    Type data;
     LinearNode<Type> * current = front; //start at beginning
     
     for (int position = 0; position < index; position++)
@@ -179,6 +181,11 @@ Type LinkedList<Type> :: remove (int index)
     return removedData;
 }
 
+
+
+
+
+
 template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
@@ -206,7 +213,7 @@ bool LinkedList<Type> :: contains(Type thingToFind)
     LinearNode<Type> * searchPointer = front;
     for (int index = 0; index < this->size; index++)
     {
-        if (searchPointer->getData() == thingToFind) ==no .equals method
+        if (searchPointer->getData() == thingToFind) //==no .equals method
         {
             exists = true;
             //or put return true here which leaves the method

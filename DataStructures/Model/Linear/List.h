@@ -10,6 +10,7 @@
 #define List_h
 
 #include "../Nodes/LinearNode.h"
+#include <assert.h>
 
 template <class Type>
 class List

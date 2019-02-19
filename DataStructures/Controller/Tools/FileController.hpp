@@ -8,13 +8,14 @@
 
 #ifndef FileController_hpp
 #define FileController_hpp
+//error-> reveal in log to further examine what your error is
 
-
-#include "Music.hpp"
+//#include "Music.hpp"
 #include "CrimeData.hpp"
 
 #include "Array.h"
 #include "LinkedList.hpp"
+#include "/Users/cjar7174/Downloads/Music.hpp"
 
 
 //#include <stdio.h>

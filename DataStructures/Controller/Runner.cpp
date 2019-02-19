@@ -18,5 +18,8 @@ int main()
    // Timer app1;
     //app1.start();
     
+    //clang error
+    //hpp files only include hpps
+    //cpps all have target checkboxes on right
    
 }

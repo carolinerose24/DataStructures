@@ -20,15 +20,15 @@ public: //points to another Linear Node next to it
     LinearNode();
     LinearNode(Type data);
     LinearNode(Type data, LinearNode<Type> * next);
-    LinearNode<Type> * getNext();
-    void setNext(LinearNode<Type> * next);
+    LinearNode<Type> * getNextNode();
+    void setNextNode(LinearNode<Type> * next);
 };
 
 //implementation of templates
 //----------------------------------------constructors---------------------------------------------------------------
-template <class Type>
-LinearNode<Type> :: LinearNode() : Node() // : mean inheritance
-{}
+//template <class Type>
+//LinearNode<Type> :: LinearNode() : Node() // : mean inheritance
+//{}
 
 template <class Type> //THIS IS THE CONSTRUCTOR
 LinearNode<Type> :: LinearNode (Type data) : Node<Type>(data) //: calls parent class, sends parameter to it (data) and returns data member
@@ -43,13 +43,13 @@ LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(
 }
 //----------------------------------------------methods--------------------------------------------------------------------
 template <class Type>
-LinearNode<Type> * LinearNode<Type> :: getNext() //Node?
+LinearNode<Type> * LinearNode<Type> :: getNextNode() //Node?
 {
     return this->next;
 }
 
 template <class Type>
-void LinearNode<Type> :: setNext(LinearNode<Type> * next) //points to next node?
+void LinearNode<Type> :: setNextNode(LinearNode<Type> * next) //points to next node?
 {
     this->next = next;
 }

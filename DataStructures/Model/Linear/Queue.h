@@ -15,7 +15,7 @@
 using namespace std;
 
 template <class Type>
-class Queue : public LinkedList<type>
+class Queue : public LinkedList<Type>
 {
 public:
     Queue();
@@ -25,7 +25,7 @@ public:
     void enqueue(Type data);
     Type dequeue();
     Type peek();
-    void clear;
+    void clear();
     
     //Overridden LinkedList methods
     void add(Type data);
@@ -86,7 +86,7 @@ Type Queue<Type> :: dequeue()
 {
     assert(this->size > 0);
     
-    Type return = this->front->getData();
+    Type return1 = this->front->getData();
     
     LinearNode<Type> * removed = this->front;
     this->front = removed->getNextNode();
@@ -95,7 +95,7 @@ Type Queue<Type> :: dequeue()
     
     this->size = this->size - 1;
     
-    return returned;
+    return return1;
 }
 
 template <class Type>
@@ -117,14 +117,14 @@ void Queue<Type> :: clear()
 template <class Type>
 Type Queue<Type> :: peek()
 {
-    assert(this->size > 0)
+    assert(this->size > 0);
     return this->getFront()->getData(); //get data from front and return it
 }
 
 template <class Type>
-Type Queue<Type> :: getFronIndex(int index)
+Type Queue<Type> :: getFromIndex(int index)
 {
-    assert(index == 0)
+    assert(index == 0);
     return peek();
 }
 

@@ -8,8 +8,9 @@
 
 #include "FileController.hpp"
 
-#include "../Model/Linear/Array.h"
-#include "../Model/Linear/LinkedList.hpp"
+
+#include "../../Model/Linear/LinkedList.hpp"
+#include "../../Model/Linear/Array.h"
 
 #include <sstream>
 
@@ -125,7 +126,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
             }
             rowCount++;
         }
-        dataFile.close()
+        dataFile.close();
     }
    else
    {
@@ -165,7 +166,7 @@ LinkedList<Music> FileController :: musicDataToList(string fileName)
             }
             rowCount++;
         }
-        dataFile.close()
+        dataFile.close();
     }
     else
     {

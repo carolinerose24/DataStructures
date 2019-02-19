@@ -15,13 +15,13 @@ template <class Type>
 class Stack : public LinkedList<Type>
 {
 public:
-    Stack()
+    Stack();
     ~Stack();
     
     //Stack specific methods
     void push(Type data); //put value at top of stack
     Type pop(); //returns and removes ^^ value
-    Type peak(); //retrieves top value w/o removing it
+    Type peek(); //retrieves top value w/o removing it
     
     //overridden linkedlist methods
     void add(Type data);
@@ -31,7 +31,7 @@ public:
 };
 
 template <class Type>
-Stack<Type> :: Stack : LinkedList<Type>()
+Stack<Type> :: Stack() : LinkedList<Type>()
 {
     //empty constructor
 }
@@ -57,7 +57,7 @@ if(this->size == 0)
 }
 else
 {
-    add->setNextNode(this->front)
+    add->setNextNode(this->front);
 }
 this->front = add;
 this->size++;
@@ -123,6 +123,6 @@ Type Stack<Type> :: getFromIndex(int index)
 //remove at zero
 //add at end
 
-HAVE TO HAVE ADD AT INDEX/OTHER LIST METHODS
+//HAVE TO HAVE ADD AT INDEX/OTHER LIST METHODS
 
 #endif /* Stack_h */
