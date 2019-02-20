@@ -112,7 +112,7 @@ LinkedList<CrimeData> FileController :: readDataToList(string fileName)
         while (!dataFile.eof())
         {
             //grab each line from the CSV separated by the carriage return character
-            getline(dataFile, currentCVSLine. '\r');
+            getline(dataFile, currentCVSLine, '\n');
             //exclude header row
             if (rowCount != 0)
             {
@@ -152,7 +152,7 @@ LinkedList<Music> FileController :: musicDataToList(string fileName)
         while (!dataFile.eof())
         {
             //grab each line from the CSV separated by the carriage return character
-            getline(dataFile, currentCVSLine. '\r');
+            getline(dataFile, currentCVSLine, '\n');
             //exclude header row
             if (rowCount != 0)
             {
