@@ -47,6 +47,7 @@
 		AB4477902209EF3F007DDAE3 /* CrimeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		AB4477932209F39E007DDAE3 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Downloads/Music.hpp; sourceTree = "<group>"; };
 		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
+		AB75F5C4221EEFAC00FC0794 /* DoubleNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleNode.h; sourceTree = "<group>"; };
 		AB85119C220C79C5006DB879 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Music.cpp; path = ../../../../../Downloads/Music.cpp; sourceTree = "<group>"; };
 		AB85119E220C84EF006DB879 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		ABABA94B221DA3C3000D6C06 /* crime (1).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crime (1).csv"; path = "../../../../../Downloads/crime (1).csv"; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 			children = (
 				AB39BB1121FF60F200B7B17C /* Node.hpp */,
 				ABFFA3032201F8E800EB979C /* LinearNode.h */,
+				AB75F5C4221EEFAC00FC0794 /* DoubleNode.h */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
