@@ -48,6 +48,7 @@
 		AB4477932209F39E007DDAE3 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Downloads/Music.hpp; sourceTree = "<group>"; };
 		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		AB75F5C4221EEFAC00FC0794 /* DoubleNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleNode.h; sourceTree = "<group>"; };
+		AB75F5C6221EF81100FC0794 /* CircularList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularList.h; sourceTree = "<group>"; };
 		AB85119C220C79C5006DB879 /* Music.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Music.cpp; path = ../../../../../Downloads/Music.cpp; sourceTree = "<group>"; };
 		AB85119E220C84EF006DB879 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		ABABA94B221DA3C3000D6C06 /* crime (1).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crime (1).csv"; path = "../../../../../Downloads/crime (1).csv"; sourceTree = "<group>"; };
@@ -126,6 +127,7 @@
 		AB39BB0921FF5BE700B7B17C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AB75F5C5221EF7EB00FC0794 /* NonLinear */,
 				ABFFA3042202060300EB979C /* Linear */,
 				ABFFA3022201F0C000EB979C /* Nodes */,
 			);
@@ -156,6 +158,13 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		AB75F5C5221EF7EB00FC0794 /* NonLinear */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NonLinear;
+			sourceTree = "<group>";
+		};
 		ABFFA3022201F0C000EB979C /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +183,7 @@
 				AB85119E220C84EF006DB879 /* List.h */,
 				AB09990B2211D5530077B42E /* Queue.h */,
 				AB09990C2211D5720077B42E /* Stack.h */,
+				AB75F5C6221EF81100FC0794 /* CircularList.h */,
 			);
 			path = Linear;
 			sourceTree = "<group>";
