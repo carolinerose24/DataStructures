@@ -26,7 +26,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     //if this file exists at that path
     if (dataFile.is_open())
     {
-        //keep reading wutil you are at the end of the file
+        //keep reading until you are at the end of the file
         while (!dataFile.eof())
         {
             //Grab each line from the CVS separated by the carriage return character.
@@ -174,3 +174,74 @@ LinkedList<Music> FileController :: musicDataToList(string fileName)
     }
     return musicList;
 }
+
+
+
+Queue<Music> FileController :: musicDataToQueue(string fileName)
+{
+    Queue<Music> musicQueue;
+    
+    string currentCVSLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(fileName);
+    
+    if (dataFile.is_open())
+    {
+        while (!dataFile.eof())
+        {
+            getline(dataFile, currentCVSLine, '\n');
+            if (rowCount != 0)
+            {
+                if (currentCVSLine.length() != 0)
+                {
+                    Music row(currentCVSLine);
+                    musicQueue.add(row);
+                    
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    return musicQueue;
+}
+
+Stack<Music> FileController :: musicDataToStack(string fileName)
+{
+    Stack<Music> musicStack;
+    
+    string currentCVSLine;
+    int rowCount = 0;
+    
+    ifstream dataFile(fileName);
+    
+    if (dataFile.is_open())
+    {
+        while (!dataFile.eof())
+        {
+            getline(dataFile, currentCVSLine, '\n');
+            if (rowCount != 0)
+            {
+                if (currentCVSLine.length() != 0)
+                {
+                    Music row(currentCVSLine);
+                    musicStack.add(row);
+                    
+                }
+            }
+            rowCount++;
+        }
+        dataFile.close();
+    }
+    else
+    {
+        cerr << "NO FILE" << endl;
+    }
+    return musicStack;
+}
+

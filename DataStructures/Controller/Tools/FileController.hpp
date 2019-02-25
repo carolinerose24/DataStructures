@@ -16,6 +16,9 @@
 #include "Array.h"
 #include "LinkedList.hpp"
 #include "/Users/cjar7174/Downloads/Music.hpp"
+#include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Linear/Queue.h"
+#include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Linear/Stack.h"
+//#include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Linear/CircularList.h"
 
 
 //#include <stdio.h>
@@ -25,7 +28,7 @@
 #include <vector>
 #include <sstream>
 
-using namespace std;
+using namespace std; //standard library access
 
 class FileController
 {
@@ -36,6 +39,11 @@ public:
     static LinkedList<CrimeData> readDataToList(string filename);
     static LinkedList<Music> musicDataToList (string filename);
     static Array<Music> musicDataToArray(string filename);
+    
+    static Queue<Music> musicDataToQueue(string filename);
+    static Stack<Music> musicDataToStack(string filename);
+    
+//    static CircularList<CrimeData> crimeDataToCircularList(string filename);
     
 };
 

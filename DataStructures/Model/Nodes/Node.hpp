@@ -20,7 +20,7 @@ public:
     Node();
     Node(Type data);
     Type getData();
-    void setData(Type data);
+    void setData(Type data); //node itself does not have a number-> index is for human use
 };
 
 //Template definitions

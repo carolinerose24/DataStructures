@@ -123,7 +123,7 @@ void CircularList<Type> :: addAtIndex(int index, Type item)
     {
         this->front = addMe;
     }
-    else if (inde == this->size)
+    else if (index == this->size)
     {
         this->end = addMe;
     }
