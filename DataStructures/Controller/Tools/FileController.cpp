@@ -21,7 +21,7 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     string currentCVSLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename);
+    ifstream dataFile(filename); //input file stream -->not owned by us, cannot be debugged
     
     //if this file exists at that path
     if (dataFile.is_open())
