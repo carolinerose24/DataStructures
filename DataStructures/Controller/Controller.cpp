@@ -8,12 +8,15 @@
 
 #include "Controller.hpp" //linker error--> check #include's
 
+
 //MARK:- stuff
 
 void Controller :: start()
 {
     cout << "This is the data structures app" << endl;
-    testLinear(); //put breakpoint here? when fixing errors/debugging,
+    testLinear();
+    
+    //put breakpoint here? when fixing errors/debugging,
     //step over: 1 line then waits
     //step into: go in and wait (follows path to where it leads)
     //step out: jumps all the way out if you are done with a path

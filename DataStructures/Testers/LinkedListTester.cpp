@@ -12,6 +12,7 @@
 #include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Resources/CrimeData.hpp"
 #include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Controller/Tools/FileController.hpp"
 
+
 using namespace std;
 
 void LinkedListTester :: testListBasics()
@@ -59,7 +60,7 @@ void LinkedListTester:: testListWithData()
     listTimer.resetTimer();
     cout << "This is how long it takes to access a random data value" << endl;
     listTimer.startTimer();
-    int randomLocation = (rand(0 * rand()) % crimes.getSize());
+    int randomLocation = 10; //(rand(0 * rand()) % crimes.getSize());
     cout << "The random index is " << randomLocation << endl;
     double totalViolenceRate = crimes.getFromIndex(randomLocation).getAllViolentRates();
     listTimer.stopTimer();
