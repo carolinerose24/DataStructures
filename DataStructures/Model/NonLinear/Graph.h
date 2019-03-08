@@ -171,12 +171,13 @@ bool Graph<Type> :: areConnected(int source, int target) const
 template <class Type>
 std::set<int> Graph<Type> :: neighbors(int vertex) const
 {
+    //Asking-> do IIIIIII have a connection
     assert(vertex < vertexCount);
     std::set<int> vertexNeighbors;
     
     for(int index = 0; index < vertexCount; index++)
     {
-        if (adjacencyMatrix[vertex][index])
+        if (adjacencyMatrix[vertex][index]) //the whole grid part
         {
             vertexNeighbors.insert(index);
         }
@@ -185,13 +186,13 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
 }
 
 //TRAVERSALS
-//Depth First - Recursive
+//Depth First - Recursive -> builds on top of itself -> no extra pieces
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
     bool visitedVertices[MAXIMUM];
     assert (vertex < currentGraph.size());
-    std::fill_n(visitedVertices, currentGraph.size(), false);
+    std::fill_n(visitedVertices, currentGraph.size(), false); //fill n gives it default values bc c++ doesn't
     depthFirstTraversal(currentGraph, vertex, visitedVerticies);
 }
 
@@ -213,7 +214,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int index, b
     }
 }
 
-//Breadth First - Iterative
+//Breadth First - Iterative, NOT Recursive (has extra pieces, but less space
 template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
@@ -226,11 +227,11 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
     std::fill_n(visited, currentGraph.size(), false);
     visited[vertex] = true;
     cout << currentGraph[vertex] << endl;
-    vertexQueue.push(vertex);
-    while(!vertexQueue.empty())
+    vertexQueue.push(vertex); //adds a value to the queue
+    while(!vertexQueue.empty()) //must loop through at least one
     {
         connections = currentGraph.neighbors(vertexQueue.front());
-        vertexQueue.pop();
+        vertexQueue.pop(); //removes from queue
         
         for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
         {
@@ -238,7 +239,11 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex
             {
                 visited[*setIterator] = true;
                 cout << currentGraph[*setIterator] << endl;
-                vertexQueue.push(*setIterator);
+                vertexQueue.push(*setIterator); //how to end the thing -> adds to queue so while loop stops
+                
+                //0 -> ada lovelace
+                //1 -> grace hopper, ada lovelace, Katherine Johnson, Ria Galanos ->Grabbed neighbors neighbors ->2nd level connections
+                                                                                    //friend of a friend
             }
         }
     }
