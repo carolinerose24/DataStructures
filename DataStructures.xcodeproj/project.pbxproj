@@ -15,6 +15,7 @@
 		AB4477892209E2DE007DDAE3 /* FileController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4477872209E2DE007DDAE3 /* FileController.cpp */; };
 		AB4D9C0F222450FC002B8EB1 /* LinkedListTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB4D9C0D222450FC002B8EB1 /* LinkedListTester.cpp */; };
 		AB85119D220C79C5006DB879 /* Music.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB85119C220C79C5006DB879 /* Music.cpp */; };
+		ABFF820F223FDB1D00189E5B /* GraphTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABFF820D223FDB1D00189E5B /* GraphTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,8 @@
 		AB85119E220C84EF006DB879 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		ABABA94B221DA3C3000D6C06 /* crime (1).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crime (1).csv"; path = "../../../../../Downloads/crime (1).csv"; sourceTree = "<group>"; };
 		ABABA94C221DA3D0000D6C06 /* music.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = music.csv; path = ../../../../../Downloads/music.csv; sourceTree = "<group>"; };
+		ABFF820D223FDB1D00189E5B /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
+		ABFF820E223FDB1D00189E5B /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		ABFFA3032201F8E800EB979C /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
 		ABFFA3052202061500EB979C /* Array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +78,8 @@
 		AB028CDA22147E4D00510DCA /* Testers */ = {
 			isa = PBXGroup;
 			children = (
+				ABFF820D223FDB1D00189E5B /* GraphTester.cpp */,
+				ABFF820E223FDB1D00189E5B /* GraphTester.hpp */,
 				AB028CDB22147E7400510DCA /* linearTester.cpp */,
 				AB028CDC22147E7400510DCA /* linearTester.hpp */,
 				AB4D9C0D222450FC002B8EB1 /* LinkedListTester.cpp */,
@@ -256,6 +261,7 @@
 				AB028CD92214739200510DCA /* CrimeData.cpp in Sources */,
 				AB028CDD22147E7400510DCA /* linearTester.cpp in Sources */,
 				AB85119D220C79C5006DB879 /* Music.cpp in Sources */,
+				ABFF820F223FDB1D00189E5B /* GraphTester.cpp in Sources */,
 				AB39BB1021FF5EAD00B7B17C /* Runner.cpp in Sources */,
 				AB4477862209DD69007DDAE3 /* Timer.cpp in Sources */,
 				AB4D9C0F222450FC002B8EB1 /* LinkedListTester.cpp in Sources */,

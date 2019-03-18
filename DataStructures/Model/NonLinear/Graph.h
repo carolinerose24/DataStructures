@@ -27,7 +27,7 @@ private:
 public:
     Graph() //graph operations
     
-    void addVertex(const Type& value);
+    void addVertex(const Type& value); //Type& like a setter, have reference to IT
     
     //Connect vertices
     void addEdge(int source, int target);
@@ -181,7 +181,8 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
         {
             vertexNeighbors.insert(index);
         }
-    }
+    } //returns a set -->goes through an ad matrix and adds each TRUE index to a set
+    //who are neighbors, have a visited them? grab them, grab neighbors who have not be visited yet
     return vertexNeighobors;
 }
 
