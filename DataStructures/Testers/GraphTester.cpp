@@ -7,14 +7,57 @@
 //
 
 #include "GraphTester.hpp"
+#include <stdio.h>
+#include <iostream>
+
 
 
 void GraphTester :: testGraphs()
 {
     setup();
-    compareTransversals();
     findCheapestTraversal();
+    compareTraversals();
+
 }
+
+
+void GraphTester :: compareTraversals()
+{
+    for (int i = 0; i < puzzle.size(); i ++ )
+    {
+      // puzzle.depthFirstTraversal(puzzle, i);
+        
+    }
+    for (int i = 0; i < puzzle.size(); i ++ )
+    {
+      //  puzzle.breadthFirstTraversal(puzzle, i);
+    }
+   
+    
+}
+
+
+void GraphTester :: findCheapestTraversal()
+{
+    int lowest = 100000;// puzzle.costTraversal(puzzle, 0);
+      int indexAtLowest = 0;
+    
+   // cout <<  puzzle.costTraversal(puzzle, 0) << endl;
+    for (int i = 0; i < puzzle.size(); i ++ )
+    {
+        //cout <<  puzzle.costTraversal(puzzle, i) << endl;
+        if (puzzle.costTraversal(puzzle, i) < lowest && puzzle.costTraversal(puzzle, i) > 0)
+        {
+            lowest = puzzle.costTraversal(puzzle, i);
+            indexAtLowest = i;
+            
+        }
+
+    }
+    cout << "The cheapest traversal is " << lowest << " at index " << indexAtLowest << "." << endl;
+}
+
+
 
 void GraphTester :: setup()
 {
@@ -66,7 +109,6 @@ void GraphTester :: setup()
     puzzle.addVertex("12 ");
     puzzle.addVertex("10 ");
     puzzle.addVertex("Hopper ");
-    
     
     
     puzzle.addEdgeUndirected(18,22);
@@ -134,14 +176,4 @@ void GraphTester :: setup()
     puzzle.addEdgeCost(12, 22, 13);
     puzzle.addEdgeCost(13, 15, 88);
     puzzle.addEdgeCost(19, 13, 21);
-}
-
-void GraphTester :: compareTransversals()
-{
-    
-}
-
-void GraphTester :: findCheapestTraversal()
-{
-    
 }

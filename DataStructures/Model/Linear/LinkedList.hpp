@@ -182,10 +182,6 @@ Type LinkedList<Type> :: remove (int index)
 }
 
 
-
-
-
-
 template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {

@@ -12,6 +12,7 @@
 #include <set>
 #include <queue>
 #include <assert.h>
+#include <iostream>
 
 using namespace std;
 template <class Type>
@@ -25,7 +26,7 @@ private:
     int vertexCount;
     void depthFirstTraversal(Graph<Type> & graph, int vertex, bool markedVertices[]);
 public:
-    Graph() //graph operations
+    Graph(); //graph operations
     
     void addVertex(const Type& value); //Type& like a setter, have reference to IT
     
@@ -183,7 +184,7 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
         }
     } //returns a set -->goes through an ad matrix and adds each TRUE index to a set
     //who are neighbors, have a visited them? grab them, grab neighbors who have not be visited yet
-    return vertexNeighobors;
+    return vertexNeighbors;
 }
 
 //TRAVERSALS
@@ -194,23 +195,23 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex)
     bool visitedVertices[MAXIMUM];
     assert (vertex < currentGraph.size());
     std::fill_n(visitedVertices, currentGraph.size(), false); //fill n gives it default values bc c++ doesn't
-    depthFirstTraversal(currentGraph, vertex, visitedVerticies);
+    depthFirstTraversal(currentGraph, vertex, visitedVertices);
 }
 
 template <class Type>
-void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int index, book * visited)
+void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, bool * visited)
 {
     std::set<int> connections = currentGraph.neighbors(vertex);
     std::set<int>::iterator setIterator;
     
     visited[vertex] = true;
-    coud << currentGraph[vertex] << ", " << endl;
+    cout << currentGraph[vertex] << "," << endl;
     
     for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
     {
         if(!visited[*setIterator])
         {
-            depthFirstTraversal(currentGraph, *setIterator, visited)
+            depthFirstTraversal(currentGraph, *setIterator, visited);
         }
     }
 }

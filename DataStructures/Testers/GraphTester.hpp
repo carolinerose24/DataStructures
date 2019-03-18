@@ -15,12 +15,12 @@
 class GraphTester
 {
 private:
-    Graph<String> puzzle;
+    Graph<string> puzzle;
     void setup();
-    void compareTransversals();
+    void compareTraversals();
     void findCheapestTraversal();
 public:
-    testGraphs();
+    void testGraphs();
 };
 
 

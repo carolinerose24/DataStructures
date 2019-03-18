@@ -25,6 +25,7 @@ private:
     void usingNodes();
     void testFiles();
     void testLinear();
+    void testGraphStuff();
 public:
     void start();
 

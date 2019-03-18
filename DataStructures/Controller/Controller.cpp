@@ -7,14 +7,15 @@
 //
 
 #include "Controller.hpp" //linker error--> check #include's
-
+#include "../Testers/GraphTester.hpp"
 
 //MARK:- stuff
 
 void Controller :: start()
 {
     cout << "This is the data structures app" << endl;
-    testLinear();
+    testGraphStuff();
+    //testLinear();
     
     //put breakpoint here? when fixing errors/debugging,
     //step over: 1 line then waits
@@ -42,8 +43,11 @@ void Controller :: testLinear()
     
 } //destructed after this ends (popped off the stack)
 
-
-
+void Controller :: testGraphStuff()
+{
+    GraphTester puzzle;
+    puzzle.testGraphs();
+}
 
 
 void Controller :: testFiles()
