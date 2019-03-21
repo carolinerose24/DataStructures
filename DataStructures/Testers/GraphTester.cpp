@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <iostream>
 
-
+//no template <class Type> in cpp
 
 void GraphTester :: testGraphs()
 {
@@ -25,7 +25,7 @@ void GraphTester :: compareTraversals()
 {
     for (int i = 0; i < puzzle.size(); i ++ )
     {
-      // puzzle.depthFirstTraversal(puzzle, i);
+       puzzle.depthFirstTraversal(puzzle, i);
         
     }
     for (int i = 0; i < puzzle.size(); i ++ )
@@ -54,7 +54,7 @@ void GraphTester :: findCheapestTraversal()
         }
 
     }
-    cout << "The cheapest traversal is " << lowest << " at index " << indexAtLowest << "." << endl;
+    cout << "The cheapest traversal is " << lowest << endl;//" at index " << indexAtLowest << "." << endl;
 }
 
 
