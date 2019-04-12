@@ -10,7 +10,7 @@
 #define BinaryTreeNode_h
 
 #include "Node.hpp"
-#include <Assert.h>
+//#include <Assert.h>
 
 template <class Type>
 class BinaryTreeNode : public Node<Type>
