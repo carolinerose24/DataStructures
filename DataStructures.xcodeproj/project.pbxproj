@@ -48,6 +48,7 @@
 		AB44778F2209EF3C007DDAE3 /* CrimeData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		AB4477902209EF3F007DDAE3 /* CrimeData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		AB4477932209F39E007DDAE3 /* Music.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Music.hpp; path = ../../../../../Downloads/Music.hpp; sourceTree = "<group>"; };
+		AB45DDBC2260D8CF005255AA /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
 		AB4D9C0D222450FC002B8EB1 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 		AB4D9C0E222450FC002B8EB1 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
 		AB5BE48A22049F46005B8C6B /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 				AB39BB1121FF60F200B7B17C /* Node.hpp */,
 				ABFFA3032201F8E800EB979C /* LinearNode.h */,
 				AB75F5C4221EEFAC00FC0794 /* DoubleNode.h */,
+				AB45DDBC2260D8CF005255AA /* BinaryTreeNode.h */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";

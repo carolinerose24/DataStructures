@@ -216,7 +216,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     }
 }
 
-//Breadth First - Iterative, NOT Recursive (has extra pieces, but less space
+//Breadth First - Iterative, NOT Recursive (has extra pieces, but less space)
 template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
 {
