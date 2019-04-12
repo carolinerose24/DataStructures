@@ -60,26 +60,26 @@ BinaryTreeNode<Type> :: BinaryTreeNode(Type data) : Node <Type> (data)
 
 //--------------------------getters-------------------------------
 template <class Type>
-Type BinaryTreeNode<Type> :: getRootNode()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRootNode()
 {
     return this->root;
 }
 
 template <class Type>
-Type BinaryTreeNode<Type> :: getLeftChildNode()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getLeftChildNode()
 {
     return this->leftChild;
 }
 
 template <class Type>
-Type BinaryTreeNode<Type> :: getRightChildNode()
+BinaryTreeNode<Type> * BinaryTreeNode<Type> :: getRightChildNode()
 {
     return this->rightChild;
 }
 
 //----------------------------setters-----------------------------
 template <class Type>
-void BinaryTreeNode<Type> :: setRootNode(BinaryTreeNode<Type> * root)
+void BinaryTreeNode<Type> :: setRootNode(BinaryTreeNode<Type> * newRoot)
 {
     root = newRoot;
 }

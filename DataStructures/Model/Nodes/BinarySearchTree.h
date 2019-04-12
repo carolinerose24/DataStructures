@@ -113,16 +113,12 @@ void BinarySearchTree<Type> :: insert(Type item)
 template <class Type>
 bool BinarySearchTree<Type> :: contains(Type item)
 {
-    return false
+    return false;
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: remove(Type item)
 {
 }
-
-
-
-
 
 #endif /* BinarySearchTree_h */

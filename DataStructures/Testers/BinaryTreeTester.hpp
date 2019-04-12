@@ -11,12 +11,14 @@
 
 #include <iostream>
 #include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Nodes/BinaryTreeNode.h"
+#include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Nodes/BinarySearchTree.h"
 
 template <class Type>
 class BinaryTreeTester
 {
 private:
     BinaryTreeNode<int> testNode;
+    BinarySearchTree<int> testTree;
 };
 
 #endif /* BinaryTreeTester_hpp */
