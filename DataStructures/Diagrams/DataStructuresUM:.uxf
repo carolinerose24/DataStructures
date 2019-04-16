@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>798</x>
+      <x>756</x>
       <y>322</y>
       <w>203</w>
       <h>161</h>
@@ -29,7 +29,7 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>798</x>
+      <x>756</x>
       <y>539</y>
       <w>294</w>
       <h>154</h>
@@ -52,7 +52,7 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>861</x>
+      <x>819</x>
       <y>476</y>
       <w>70</w>
       <h>77</h>
@@ -63,7 +63,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>784</x>
+      <x>742</x>
       <y>161</y>
       <w>147</w>
       <h>21</h>
@@ -75,7 +75,7 @@ bg=none</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1036</x>
+      <x>994</x>
       <y>336</y>
       <w>266</w>
       <h>182</h>
@@ -101,7 +101,7 @@ bg=light_gray</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>784</x>
+      <x>742</x>
       <y>196</y>
       <w>196</w>
       <h>119</h>
@@ -122,7 +122,7 @@ bg=cyan</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1162</x>
+      <x>1120</x>
       <y>707</y>
       <w>203</w>
       <h>154</h>
@@ -147,7 +147,7 @@ bg=light_gray</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1197</x>
+      <x>1155</x>
       <y>574</y>
       <w>224</w>
       <h>105</h>
@@ -165,7 +165,7 @@ bg=none</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1155</x>
+      <x>1113</x>
       <y>1106</y>
       <w>203</w>
       <h>252</h>
@@ -199,7 +199,7 @@ bg=gray</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>945</x>
+      <x>903</x>
       <y>1106</y>
       <w>203</w>
       <h>252</h>
@@ -233,7 +233,7 @@ bg=gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
+      <x>966</x>
       <y>1064</y>
       <w>56</w>
       <h>56</h>
@@ -244,7 +244,7 @@ bg=gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
+      <x>1148</x>
       <y>1064</y>
       <w>49</w>
       <h>56</h>
@@ -255,7 +255,7 @@ bg=gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1085</x>
+      <x>1043</x>
       <y>588</y>
       <w>140</w>
       <h>133</h>
@@ -267,7 +267,7 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1022</x>
+      <x>980</x>
       <y>903</y>
       <w>231</w>
       <h>168</h>
@@ -294,7 +294,7 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1141</x>
+      <x>1099</x>
       <y>854</y>
       <w>56</w>
       <h>63</h>
@@ -305,7 +305,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1414</x>
+      <x>1372</x>
       <y>798</y>
       <w>189</w>
       <h>147</h>
@@ -326,7 +326,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1631</x>
+      <x>1589</x>
       <y>798</y>
       <w>161</w>
       <h>147</h>
@@ -347,7 +347,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1435</x>
+      <x>1393</x>
       <y>1085</y>
       <w>182</w>
       <h>77</h>
@@ -361,7 +361,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1624</x>
+      <x>1582</x>
       <y>1085</y>
       <w>168</w>
       <h>77</h>
@@ -375,7 +375,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1435</x>
+      <x>1393</x>
       <y>1253</y>
       <w>182</w>
       <h>70</h>
@@ -389,7 +389,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1624</x>
+      <x>1582</x>
       <y>1169</y>
       <w>168</w>
       <h>77</h>
@@ -403,7 +403,7 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1435</x>
+      <x>1393</x>
       <y>1169</y>
       <w>182</w>
       <h>77</h>
@@ -417,7 +417,7 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1351</x>
+      <x>1309</x>
       <y>1085</y>
       <w>98</w>
       <h>42</h>
@@ -429,7 +429,7 @@ bg=pink</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>903</x>
+      <x>861</x>
       <y>1001</y>
       <w>133</w>
       <h>161</h>
@@ -441,7 +441,7 @@ Aggregation</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>483</x>
+      <x>441</x>
       <y>518</y>
       <w>252</w>
       <h>189</h>
@@ -456,13 +456,23 @@ Aggregation</panel_attributes>
 + DoubleNode(Type, DN*, DN*)
 + get/set
 
+
+
+
+
+
+
+
+
+
+
 bg=light_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>616</x>
+      <x>574</x>
       <y>392</y>
       <w>196</w>
       <h>140</h>
@@ -473,7 +483,7 @@ bg=light_gray</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>231</x>
+      <x>189</x>
       <y>0</y>
       <w>427</w>
       <h>434</h>
@@ -522,7 +532,7 @@ Graph() : constructor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>77</x>
+      <x>35</x>
       <y>602</y>
       <w>329</w>
       <h>245</h>
@@ -550,7 +560,7 @@ bg=dark_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
+      <x>238</x>
       <y>455</y>
       <w>532</w>
       <h>161</h>
@@ -561,8 +571,8 @@ bg=dark_gray</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>574</x>
-      <y>770</y>
+      <x>693</x>
+      <y>756</y>
       <w>42</w>
       <h>77</h>
     </coordinates>
@@ -573,8 +583,8 @@ fg=magenta</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>441</x>
-      <y>777</y>
+      <x>700</x>
+      <y>819</y>
       <w>42</w>
       <h>77</h>
     </coordinates>
@@ -585,8 +595,8 @@ fg=cyan</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>518</x>
-      <y>735</y>
+      <x>637</x>
+      <y>847</y>
       <w>42</w>
       <h>77</h>
     </coordinates>
@@ -597,13 +607,111 @@ fg=orange</panel_attributes>
   <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>504</x>
-      <y>812</y>
+      <x>644</x>
+      <y>777</y>
       <w>42</w>
       <h>77</h>
     </coordinates>
     <panel_attributes>
 fg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>924</y>
+      <w>322</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>/Tree &lt;Type&gt;/
+--
+
+# root : BinaryTreeNode&lt;Type&gt;
+//# means protected
+
+--
+*Informational Methods*
++ getSize() : int
++ getHeight() : int
++ isComplete() : bool
++ isBalanced() : bool
+
+*Data Members*
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
+
+*Traversals*
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void
+
+
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>840</y>
+      <w>91</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>364</x>
+      <y>924</y>
+      <w>413</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>BinarySearchTree&lt;Type&gt;
+--
+*Structure*
++ BinarySearchTree() : Constructor
++ ~BinarySearchTree() : Destructor
+# destroyTree() : void
+
+*Informational Methods*
++ getSize() : int
++ getHeight() : int
++ isComplete() : bool
++ isBalanced() : bool
++ getRoot() : BinaryTreeNode&lt;Type&gt; *
+
+*Recursive Information Helpers*
+# calculateSize(BinaryTreeNode&lt;Type&gt; * startNode) : int
+# calculateHeight(BinaryTreeNode&lt;Type&gt; * startNode) : int
+# isBalanced(BinaryTreeNode&lt;Type&gt; * startNode) : bool
+# isComplete(BinaryTreeNode&lt;Type&gt; * startNode, int index, int size) : bool
+
+*Data Methods*
++ insert(Type) : void
++ contains(Type) : bool
++ remove(Type) : void
+
+*Recursive Data Helpers*
+# removeNode(BinaryTreeNode&lt;Type&gt; * removeMe) : void
+
+*Traversals*
++ inOrderTraversal() : void
++ preOrderTraversal() : void
++ postOrderTraversal() : void
+
+*Recursive Traversal Helpers*
+# inOrderTraversal(BinaryTreeNode&lt;Type&gt; * inStart) : void
+# preOrderTraversal(BinaryTreeNode&lt;Type&gt; * preStart) : void
+# postOrderTraversal(BinaryTreeNode&lt;Type&gt; * postStart) : void
+# getRightMostChild(BinaryTreeNode&lt;Type&gt; * current) : BinaryTreeNode&lt;Type&gt;*
+# getLeftMostChild(BinaryTreeNode&lt;Type&gt; * current) : BinaryTreeNode&lt;Type&gt;*
+
+bg=pink</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

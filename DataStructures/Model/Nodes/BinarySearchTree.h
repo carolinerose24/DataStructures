@@ -18,6 +18,7 @@ template <class Type>
 class BinarySearchTree : public Tree<Type>
 {
     //MARK:: Protected Methods
+protected:
     int calculateSize(BinaryTreeNode<Type> * startNode);
     int calculateHeight(BinaryTreeNode<Type> * startNode);
     bool isBalanced(BinaryTreeNode<Type> * startNode);
@@ -88,8 +89,22 @@ bool BinarySearchTree<Type> :: isBalanced()
 template <class Type>
 void BinarySearchTree<Type> :: inOrderTraversal()
 {
+    inorderTraversal(this->root);
     
 }
+
+//protected? idk what to do with this
+//Recursive Traversal Implementation
+//template <class Type>
+//void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
+//{
+//    if (currentNode != nullptr)
+//    {
+//        inOrderTraversal(currentNode->getLeftChildNode());
+//        cout << currentNode->getData() << endl;
+//        inOrderTraversal(currentNode->getRightChildNode());
+//    }
+//}
 
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
@@ -106,8 +121,48 @@ void BinarySearchTree<Type> :: postOrderTraversal()
 
 //----------------------data operation stubs--------------
 template <class Type>
-void BinarySearchTree<Type> :: insert(Type item)
+void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
+    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert);
+    BinaryTreeNode<Type> * previous = nullptr;
+    BinaryTreeNode<Type> * current = this->root;
+    
+    if (current != nullptr)
+    {
+        this->root = insertMe;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            previous = current;
+            if (itemToInsert < current->getData())
+            {
+                current = current->getLeftChildNode();
+            }
+            else if (itemToInsert > current->getData())
+            {
+                current = current->getRightChildNode();
+            }
+            else //remove cerr after verificaiton of understanding
+            {
+                cerr << "Item exists already - Exiting insert" << endl;
+                delete insertMe;
+                return; //returning nothing
+            }
+            
+        }
+        
+        if (previous->getData() > itemToInsert)
+        {
+            previous->setLeftChildNode(insertMe);
+        }
+        else
+        {
+            previous->setRootNode(insertMe);
+        }
+        insertMe->setRootNode(previous);
+    }
 }
 
 template <class Type>
