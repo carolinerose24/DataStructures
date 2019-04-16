@@ -63,35 +63,102 @@ public:
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
-    return -1;
+    return calculateHeight(this->root);
+    
+   // return -1;
 }
+
+//I'm not sure if this goes here??
+template <class Type>
+int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
+{
+    if (current != nullptr)
+    {
+        return max(calculateHeight(current->getLeftChildNode()), calculateHeight(current->getRightChildNode())) + 1;
+    }
+    return 0;
+}
+
 
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
 {
-    return -1;
+    int size = 0;
+    size += calculateSize(this->root);
+    
+    return size;
+    
+    
+    //return -1;
 }
 
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
-    return false;
+    int index = 0;
+    int size = getSize();
+    
+    return isComplete(this->root, index, size);
+    //return false;
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
+{
+    if(startNode == nullptr)
+    {
+        return true;
+    }
+    
+    if (index >= size)
+    {
+        return false;
+    }
+    
+    return(isComplete(startNode->getLeftChildNode(), 2 * index + 1, size) && isComplete(startNode->getRightChildNode(), 2 * index + 2, size));
 }
 
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced()
 {
+    return isBalanced(this->root);
+    //return false;
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
+{
+    int leftHeight = 0;
+    int rightHeight = 0;
+    
+    if (current == nullptr)
+    {
+        return true;
+    }
+    
+    leftHeight = calculateHeight(current->getLeftChildNode());
+    rightHeight = calculateHeight(current->getRightChildNode());
+    
+    int heightDifference = abs(leftHeight - rightHeight);
+    bool leftBalanced = isBalanced(current->getLeftChildNode());
+    bool rightBalanced = isBalanced(current->getRightChildNode());
+    
+    if (heightDifference <= 1 && leftBalanced && rightBalanced)
+    {
+        return true;
+    }
     return false;
+    
 }
 
 
 //-------------------traversal stubs---------------------
-template <class Type>
-void BinarySearchTree<Type> :: inOrderTraversal()
-{
-    inorderTraversal(this->root);
-    
-}
+//template <class Type>
+//void BinarySearchTree<Type> :: inOrderTraversal()
+//{
+//    inorderTraversal(this->root);
+//
+//}
 
 //protected? idk what to do with this
 //Recursive Traversal Implementation
@@ -106,11 +173,11 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNo
     }
 }
 
-template <class Type>
-void BinarySearchTree<Type> :: preOrderTraversal()
-{
-    preOrderTraversal(this->root);
-}
+//template <class Type>
+//void BinarySearchTree<Type> :: preOrderTraversal()
+//{
+//    preOrderTraversal(this->root);
+//}
 
 //protected pre order traversal root, left, right
 template <class Type>
@@ -124,11 +191,11 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentN
     }
 }
 
-template <class Type>
-void BinarySearchTree<Type> :: postOrderTraversal()
-{
-    postOrderTraversal(this->root);
-}
+//template <class Type>
+//void BinarySearchTree<Type> :: postOrderTraversal()
+//{
+//    postOrderTraversal(this->root);
+//}
 
 //left, right, root
 template <class Type>
