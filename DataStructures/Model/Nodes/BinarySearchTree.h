@@ -95,28 +95,53 @@ void BinarySearchTree<Type> :: inOrderTraversal()
 
 //protected? idk what to do with this
 //Recursive Traversal Implementation
-//template <class Type>
-//void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
-//{
-//    if (currentNode != nullptr)
-//    {
-//        inOrderTraversal(currentNode->getLeftChildNode());
-//        cout << currentNode->getData() << endl;
-//        inOrderTraversal(currentNode->getRightChildNode());
-//    }
-//}
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if (currentNode != nullptr)
+    {
+        inOrderTraversal(currentNode->getLeftChildNode());
+        cout << currentNode->getData() << endl;
+        inOrderTraversal(currentNode->getRightChildNode());
+    }
+}
 
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);
+}
+
+//protected pre order traversal root, left, right
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if (currentNode != nullptr)
+    {
+        cout << currentNode->getData() << endl;
+        preOrderTraversal(currentNode->getLeftChildNode());
+        preOrderTraversal(currentNode->getRightChildNode());
+    }
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal()
 {
-    
+    postOrderTraversal(this->root);
 }
+
+//left, right, root
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftChildNode());
+        postOrderTraversal(currentNode->getRightChildNode());
+        cout << currentNode->getData() << endl;
+    }
+}
+
 
 
 //----------------------data operation stubs--------------

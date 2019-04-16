@@ -11,10 +11,17 @@
 #include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Nodes/BinarySearchTree.h"
 
 
-using namespace std;
+//using namespace std;
+
+//template <class Type>
+//int BinaryTreeNode:: testNode;
+//{
+//
+//}
+
 
 template <class Type>
-void BinaryTreeTester :: doTreeStuff()
+void BinaryTreeTester<Type> :: doTreeStuff()
 {
     testTree.insert(22);
     testTree.insert(32);
@@ -26,4 +33,7 @@ void BinaryTreeTester :: doTreeStuff()
     testTree.insert(104);
     
     testTree.inOrderTraversal();
+    testTree.preOrderTraversal();
+    testTree.postOrderTraversal();
+    
 }
