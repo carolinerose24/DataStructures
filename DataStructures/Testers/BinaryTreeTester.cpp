@@ -11,14 +11,6 @@
 #include "/Users/cjar7174/Documents/C++ Folder/DataStructures/DataStructures/Model/Nodes/BinarySearchTree.h"
 
 
-//using namespace std;
-
-//template <class Type>
-//int BinaryTreeNode:: testNode;
-//{
-//
-//}
-
 
 template <class Type>
 void BinaryTreeTester<Type> :: doTreeStuff()

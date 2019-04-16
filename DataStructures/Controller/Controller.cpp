@@ -14,7 +14,9 @@
 void Controller :: start()
 {
     cout << "This is the data structures app" << endl;
-    testGraphStuff();
+    usingNodes();
+    
+//    testGraphStuff();
     //testLinear();
     
     //put breakpoint here? when fixing errors/debugging,
