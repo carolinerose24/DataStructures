@@ -23,6 +23,10 @@ void BinaryTreeTester<Type> :: doTreeStuff()
     testTree.insert(6);
     testTree.insert(445);
     testTree.insert(104);
+    //duplicates are thrown out --> not helpful to the tree
+    //unbalanced trees are not as efficient as they could be (ex if 1 side has no kids)
+    //balance from the bottom up --> rotate a parent to be a child, and then bring middle one up
+    //but you HAVE to keep track of relationships and pointers
     
     testTree.inOrderTraversal();
     testTree.preOrderTraversal();

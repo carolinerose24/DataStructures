@@ -60,25 +60,6 @@ public:
     Type findMinimum();
 };
 //--------------informational method stubs-------------------
-template <class Type>
-int BinarySearchTree<Type> :: getHeight()
-{
-    return calculateHeight(this->root);
-    
-   // return -1;
-}
-
-//I'm not sure if this goes here??
-template <class Type>
-int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
-{
-    if (current != nullptr)
-    {
-        return max(calculateHeight(current->getLeftChildNode()), calculateHeight(current->getRightChildNode())) + 1;
-    }
-    return 0;
-}
-
 
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
@@ -92,6 +73,44 @@ int BinarySearchTree<Type> :: getSize()
     //return -1;
 }
 
+template <class Type>
+int BinarySearchTree<Type> :: calculateSize(BinaryTreeNode<Type> * current)
+{
+    if (current != nullptr)
+    {
+        return calculateSize(current->getLeftChildNode()) + calculateSize(current->getRightChildNode()) + 1;
+    }
+    return 0;
+}
+
+// to compare strings in a tree, overloads --> does it by alphabetical a < b
+
+//----------------------------get height / calculate height------------------------
+
+template <class Type>
+int BinarySearchTree<Type> :: getHeight()
+{
+    return calculateHeight(this->root);
+    
+    // return -1;
+}
+
+
+template <class Type>
+int BinarySearchTree<Type> :: calculateHeight(BinaryTreeNode<Type> * current)
+{
+    if (current != nullptr)
+    {
+        return max(calculateHeight(current->getLeftChildNode()), calculateHeight(current->getRightChildNode())) + 1;
+    }
+    return 0;
+}
+
+
+
+
+
+//-----------------is complete----------------------------------
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
@@ -118,6 +137,8 @@ bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int 
     return(isComplete(startNode->getLeftChildNode(), 2 * index + 1, size) && isComplete(startNode->getRightChildNode(), 2 * index + 2, size));
 }
 
+
+//---------------------------is balanced--------------------------------------
 template <class Type>
 bool BinarySearchTree<Type> :: isBalanced()
 {
@@ -153,12 +174,14 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
 
 
 //-------------------traversal stubs---------------------
-//template <class Type>
-//void BinarySearchTree<Type> :: inOrderTraversal()
-//{
-//    inorderTraversal(this->root);
-//
-//}
+
+//-------------------------in order---------------------------Left/Root/Right
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal()
+{
+    inorderTraversal(this->root);
+
+}
 
 //protected? idk what to do with this
 //Recursive Traversal Implementation
@@ -173,11 +196,13 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNo
     }
 }
 
-//template <class Type>
-//void BinarySearchTree<Type> :: preOrderTraversal()
-//{
-//    preOrderTraversal(this->root);
-//}
+
+//-----------------------pre order--------------------------Root/Left/Right
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal()
+{
+    preOrderTraversal(this->root);
+}
 
 //protected pre order traversal root, left, right
 template <class Type>
@@ -191,11 +216,13 @@ void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentN
     }
 }
 
-//template <class Type>
-//void BinarySearchTree<Type> :: postOrderTraversal()
-//{
-//    postOrderTraversal(this->root);
-//}
+
+//--------------------post order----------------------------- Left/Right/Root
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal()
+{
+    postOrderTraversal(this->root);
+}
 
 //left, right, root
 template <class Type>
