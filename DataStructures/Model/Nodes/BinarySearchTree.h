@@ -14,7 +14,7 @@
 
 using namespace std;
 
-template <class Type>
+template <class Type> //definitions here, methods later
 class BinarySearchTree : public Tree<Type>
 {
     //MARK:: Protected Methods
@@ -59,6 +59,10 @@ public:
     Type findMaximum();
     Type findMinimum();
 };
+
+
+
+
 //--------------informational method stubs-------------------
 
 template <class Type>

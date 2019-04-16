@@ -17,7 +17,7 @@ template <class Type>
 class BinaryTreeTester
 {
 private:
-    BinaryTreeNode<int> testNode;
+    BinaryTreeNode<int> testNode; // no yellow line so it must be used somewhere?
     BinarySearchTree<int> testTree;
 public:
     void doTreeStuff();

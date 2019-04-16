@@ -33,3 +33,6 @@ void BinaryTreeTester<Type> :: doTreeStuff()
     testTree.postOrderTraversal();
     
 }
+
+
+//do I need anything for the private data members? or just the methods
