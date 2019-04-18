@@ -35,6 +35,7 @@ protected:
     
     void removeNode (BinaryTreeNode<Type> * removeMe);
     
+    
 public:
     //MARK: Public Methods
     BinarySearchTree();
@@ -59,6 +60,26 @@ public:
     Type findMaximum();
     Type findMinimum();
 };
+
+//-------------------------------tree destructors--------------------------------
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    destroyTree(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if (node != nullptr)
+    {
+        destroyTree(node->getLeftChildNode());
+        destroyTree(node->getRightChildNode());
+        delete node;
+    }
+}
+
 
 
 
