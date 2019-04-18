@@ -469,6 +469,34 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 
 
 
+//-------------------get left most and right most----------------------------------------
+template <class Type>
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
+{
+    
+}
+
+
+
+template <class Type>
+BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNode<Type> * startingNode)
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
