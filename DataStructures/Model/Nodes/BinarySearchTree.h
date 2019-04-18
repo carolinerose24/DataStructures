@@ -243,6 +243,7 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
 
 
 //----------------------data operation stubs--------------
+//------------------------------------------insert---------------------------------------
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
@@ -287,16 +288,189 @@ void BinarySearchTree<Type> :: insert(Type itemToInsert)
         insertMe->setRootNode(previous);
     }
 }
-
+//--------------------------------------contains--------------------------------------------
 template <class Type>
-bool BinarySearchTree<Type> :: contains(Type item)
+bool BinarySearchTree<Type> :: contains(Type itemToFind)
 {
-    return false;
+    BinaryTreeNode<Type> * current = this->root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else{
+        while (current != nullptr)
+        {
+            if (itemToFind == current->getData())
+            {
+                return true;
+            }
+            else if (itemToFind < current->getData())
+            {
+                current = current->getLeftChildNode();
+            }
+            else
+            {
+                current = current->getRightChildNode();
+            }
+        }
+        return false;
+    }
+    
+}
+//-----------------------------------------remove-----------------------------------------------
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
+{
+    if (this->root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while (current != nullptr && !hasBeenFound)
+        {
+            if (current->getData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if (getRidOfMe < current->getData())
+                {
+                    current = current->getLeftChildNode();
+                }
+                else
+                {
+                    current = current->getRightChildNode();
+                }
+            }
+        }
+        
+        if (current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if (hasBeenFound)
+        {
+            if (current == this->root)
+            {
+                removeNode(this->root);
+            }
+            else if (getRidOfMe < previous->getData())
+            {
+                removeNode(previous->getLeftChildNode());
+            }
+            else
+            {
+                removeNode(previous->getRightChildNode());
+            }
+        }
+    }
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: remove(Type item)
+void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 {
+    BinaryTreeNode<Type> * current;
+    BinaryTreeNode<Type> * previous;
+    BinaryTreeNode<Type> * temp;
+    
+    previous = removeMe->getRootNode();
+    
+    //Node is a leaf -> has no kids
+    
+    if (removeMe->getRightChildNode() == nullptr && removeMe->getLeftChildNode() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = nullptr;
+        
+        if (previous != nullptr && removeMe->getData() < previous->getData())
+        {
+            previous->setLeftChildNode(removeMe);
+        }
+        else if (previous != nullptr && removeMe->getData() > previous->getData())
+        {
+            previous->setRightChildNode(removeMe);
+        }
+        delete temp;
+    }
+    //Node only has a LEFT child
+    else if(removeMe->getRightChildNode() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getLeftChildNode();
+        
+        if (previous != nullptr && temp->getData() < previous->getData())
+        {
+            previous->setLeftChildNode(removeMe);
+        }
+        else if (previous != nullptr && temp->getData() > previous->getData())
+        {
+            previous->setRightChildNode(previous);
+        }
+        
+        removeMe->setRootNode(previous);
+        
+        delete temp;
+    }
+    //Node only has a RIGHT child
+    else if (removeMe->getLeftChildNode() == nullptr)
+    {
+        temp = removeMe;
+        removeMe = removeMe->getRightChildNode();
+        if (previous != nullptr && removeMe->getData() < previous->getData())
+        {
+            previous->setLeftChildNode(removeMe);
+        }
+        else if (previous != nullptr && removeMe->getData() > previous->getData())
+        {
+            previous->setRightChildNode(removeMe);
+        }
+        
+        removeMe->setRootNode(previous);
+        delete temp;
+    }
+    //Node has BOTH children
+    else
+    {
+        current = getRightMostChild(removeMe->getLeftChildNode());
+        
+        previous = current->getRootNode();
+        removeMe->setData(current->getData());
+        
+        if (previous == nullptr)
+        {
+            removeMe->setLeftChildNode(current->getLeftChildNode());
+        }
+        else
+        {
+            previous->setRightChildNode(current->getLeftChildNode());
+        }
+        
+        if (current->getLeftChildNode() != nullptr)
+        {
+            current->getLeftChildNode()->setRootNode(removeMe);
+        }
+        delete current;
+    }
+    //not sure if this last part goes here
+    if (removeMe == nullptr || removeMe->getRootNode() == nullptr)
+    {
+        this->root = removeMe;
+    }
+    
+    
 }
+
+
+
+
+
+
 
 #endif /* BinarySearchTree_h */
