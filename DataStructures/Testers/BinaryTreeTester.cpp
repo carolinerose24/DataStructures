@@ -32,6 +32,10 @@ void BinaryTreeTester<Type> :: doTreeStuff()
     testTree.preOrderTraversal();
     testTree.postOrderTraversal();
     
+    testTree.isBalanced();
+    testTree.isComplete();
+    testTree.getHeight();
+    
 }
 
 
