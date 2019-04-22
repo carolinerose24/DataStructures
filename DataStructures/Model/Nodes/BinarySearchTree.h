@@ -539,6 +539,10 @@ Type BinarySearchTree<Type> :: findMinimum()
 }
 
 
-
+//If adding words that have symbols like < or } or $ they are put at the FRONT -> BEFORE any regular words
+//otherwise just sort by alphabetical order -> try to have the ROOT a mid alphabet letter or it will be VERY SKEWED
+//still no duplicates so it would just disappear
+//would capital letters count as a different word? if all the rest was the same --> would it count as a duplicate? or not?
+//And would a capital letter word be Left or Right? (bigger or smaller) assuming it does NOT count as a duplicate
 
 #endif /* BinarySearchTree_h */
