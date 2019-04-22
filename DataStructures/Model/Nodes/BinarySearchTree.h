@@ -37,7 +37,7 @@ protected:
     
     
 public:
-    //MARK: Public Methods
+    //MARK:: Public Methods
     BinarySearchTree();
     ~BinarySearchTree();
     
@@ -61,6 +61,8 @@ public:
     Type findMinimum();
 };
 
+
+//MARK:: Tree Destructors
 //-------------------------------tree destructors--------------------------------
 
 template <class Type>
@@ -83,8 +85,8 @@ void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
 
 
 
-
-//--------------informational method stubs-------------------
+//MARK:: info methods
+//--------------informational method stubssss-------------------
 
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
@@ -198,7 +200,8 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
 }
 
 
-//-------------------traversal stubs---------------------
+//MARK:: Traversals
+//-------------------traversal stubs (that are no longer stubs)---------------------
 
 //-------------------------in order---------------------------Left/Root/Right
 template <class Type>
@@ -262,7 +265,7 @@ void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * current
 }
 
 
-
+//MARK:: Data Operation Methods
 //----------------------data operation stubs--------------
 //------------------------------------------insert---------------------------------------
 template <class Type>
@@ -489,7 +492,7 @@ void BinarySearchTree<Type> :: removeNode(BinaryTreeNode<Type> * removeMe)
 }
 
 
-
+//MARK:: Get left and Right Most
 //-------------------get left most and right most----------------------------------------
 template <class Type>
 BinaryTreeNode<Type> * BinarySearchTree<Type> :: getLeftMostChild(BinaryTreeNode<Type> * startingNode)
@@ -519,6 +522,7 @@ BinaryTreeNode<Type> * BinarySearchTree<Type> :: getRightMostChild(BinaryTreeNod
     return previous;
 }
 
+//MARK:: Min and Max
 //-------------------------------find min and max-----------------------------
 template <class Type>
 Type BinarySearchTree<Type> :: findMaximum()
@@ -533,22 +537,6 @@ Type BinarySearchTree<Type> :: findMinimum()
     assert(this->root != nullptr);
     return getLeftMostChild(this->root)->getData();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
