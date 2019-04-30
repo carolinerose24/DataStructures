@@ -35,8 +35,6 @@ public:
     void insert(Type itemToInsert);
     void remove(Type value);
     
-    
-    
 };
 
 /*
@@ -53,8 +51,8 @@ AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
 //------------------------------------balance sub tree---------------------------------------------
 /*
  to determine which side of the tree is bigger (left side - right side)
- if pos -> look to left side
- if neg -> look to right side
+ if pos -> look to left side (L>R)
+ if neg -> look to right side (R>L)
  */
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * parent)
