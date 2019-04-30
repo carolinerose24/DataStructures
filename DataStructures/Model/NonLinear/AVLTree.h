@@ -86,9 +86,78 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
     return parent;
 }
 
+//-------------------------height difference-------------------------------------------
+template <class Type>
+int AVLTree<Type> :: heightDifference(BinaryTreeNode<Type> * node)
+{
+    int balance;
+    int leftHeight = this->calculateHeight(node->getLeftChildNode());
+    int rightHeight = this->calculateHeight(node->getRightChildNode());
+    
+    balance = leftHeight - rightHeight;
+    return balance;
+}
 
 
-//overloaded methods --> remove and insert but also keep the balance-----------------------------------------------
+//-------------------------ROTATION METHODS---------------------------------------------------
+
+//---------------left rotation---------------------------------------------
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: leftRotation (BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;  //make pointer
+    changedNode = parent->getLeftChildNode(); //set it to be the child
+    
+    parent->setLeftChildNode(changedNode->getRightChildNode()); //makes it the other side's child
+    
+    changedNode->setRightChildNode(parent); //set other child to the parent
+    
+    parent->setRootNode(changedNode); //tell parent who it's parent NOW is
+    
+    return changedNode; //return the new formation
+}
+
+//------------------right rotation----------------------------------------
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: rightRotation (BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChildNode();
+    
+    parent->setRightChildNode(changedNode->getLeftChildNode());
+    
+    changedNode->setLeftChildNode(parent);
+    parent->setRootNode(changedNode);
+    
+    return changedNode;
+}
+
+//--------------------------R/L rotation-----------------------------------
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: rightLeftRotation (BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getRightChildNode();
+    
+    parent->setRightChildNode(leftRotation(changedNode)); //calls another methods
+    
+    return rightRotation(parent); //returns with ANOTHER call
+}
+
+//--------------------------L/R rotation------------------------------------
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: leftRightRotation (BinaryTreeNode<Type> * parent)
+{
+    BinaryTreeNode<Type> * changedNode;
+    changedNode = parent->getLeftChildNode();
+    
+    parent->setLeftChildNode(rightRotation(changedNode));
+    
+    return leftRotation(parent);
+}
+
+
+//------------overloaded methods --> remove and insert but also keep the balance------------------------------------
 
 //-------------------------------------------REMOVE------------------------------------------------------
 template <class Type>
