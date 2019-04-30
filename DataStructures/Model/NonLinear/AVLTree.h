@@ -43,7 +43,54 @@ public:
  Xcode's javadoc looks like this
  */
 
+//-----------------------------------Constructor-------------------------------------------------
+template <class Type>
+AVLTree<Type> :: AVLTree() : BinarySearchTree<Type>()
+{
+    this->root = nullptr;
+}
+
+//------------------------------------balance sub tree---------------------------------------------
+/*
+ to determine which side of the tree is bigger (left side - right side)
+ if pos -> look to left side
+ if neg -> look to right side
+ */
+template <class Type>
+BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if (balanceFactor > 1)
+    {
+        if (heightDifference(parent->getLeftChildNode()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    else if (balanceFactor < - 1)
+    {
+        if (heightDifference(parent->getRightChildNode()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    return parent;
+}
+
+
+
 //overloaded methods --> remove and insert but also keep the balance-----------------------------------------------
+
+//-------------------------------------------REMOVE------------------------------------------------------
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type> :: removeNode (BinaryTreeNode<Type> * parent, Type inserted)
 {
@@ -92,13 +139,17 @@ BinaryTreeNode<Type> * AVLTree<Type> :: removeNode (BinaryTreeNode<Type> * paren
 }
 
 
+//--------------------------------------------INSERT----------------------------------------------------------
 template <class Type> //insert and balance tree
 BinaryTreeNode<Type> * AVLTree<Type> :: insertNode (BinaryTreeNode<Type> * parent, Type inserted)
 {
     if (parent == nullptr) //if at the first thing, create new tree
     {
         parent = new BinaryTreeNode<Type>(inserted);
-        this->setRoot(parent);
+        if (this->getRootNode() == nullptr)
+        {
+            this->setRootNode(parent);
+        }
         return parent;
     }
     else if (inserted < parent->getNodeData()) //if there is a root-> set left node to parent
@@ -113,17 +164,17 @@ BinaryTreeNode<Type> * AVLTree<Type> :: insertNode (BinaryTreeNode<Type> * paren
     }
     return parent;
 }
-
+//----------------------------------------insert/remove small methods---------------------------------------------------
 template <class Type>
 void AVLTree<Type> :: insert(Type item)
 {
-    insertNode(this->getRoot(), item);
+    insertNode(this->getRootNode(), item);
 }
 
 template <class Type>
 void AVLTree<Type> :: remove(Type item)
 {
-    removeNode(this->getRoot(), item);
+    removeNode(this->getRootNode(), item);
 }
 
 
