@@ -39,11 +39,56 @@ public:
     
 };
 
+/*
+ Xcode's javadoc looks like this
+ */
 
+//overloaded methods --> remove and insert but also keep the balance-----------------------------------------------
 template <class Type>
 BinaryTreeNode<Type> * AVLTree<Type> :: removeNode (BinaryTreeNode<Type> * parent, Type inserted)
 {
+    if (parent == nullptr)
+    {
+        return parent;
+    }
+    if (inserted < parent->getNodeData())
+    {
+        parent->setLeftChildNode(removeNode(parent->getLeftChildNode(), inserted));
+    }
+    else if (inserted < parent->getNodeData())
+    {
+        parent->setRightChildNode(removeNode(parent->getRightChildNode(), inserted));
+    }
+    else
+    {
+        BinaryTreeNode<Type> * temp;
+        if (parent->getLeftChildNode() == nullptr && parent0>getRightChildNode() == nullptr)
+        {
+            temp = parent;
+            delete temp;
+        }
+        else if (parent->getLeftChildNode() == nullptr)
+        {
+            *parent = *parent->getRightChildNode();
+        }
+        else if (parent->getRightChildNode() == nullptr)
+        {
+            *parent = *parent->getLeftChildNode();
+        }
+        else
+        {
+            BinaryTreeNode<Type> * leftMost = this->getLeftMostChild(parent->getRightChildNode());
+            parent->setNodeData(leftMost->getNodeData());
+            parent->setRightChildNode(removeNode(parent->getRightChildNode(), inserted));
+        }
+    }
     
+    if (parent == nullptr)
+    {
+        return parent;
+    }
+    
+    return balanceSubTree(parent);
 }
 
 
