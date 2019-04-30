@@ -64,6 +64,7 @@
 		AB85119E220C84EF006DB879 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		ABABA94B221DA3C3000D6C06 /* crime (1).csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "crime (1).csv"; path = "../../../../../Downloads/crime (1).csv"; sourceTree = "<group>"; };
 		ABABA94C221DA3D0000D6C06 /* music.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = music.csv; path = ../../../../../Downloads/music.csv; sourceTree = "<group>"; };
+		ABF876BB22788B9F0013BB32 /* AVLTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
 		ABFF820D223FDB1D00189E5B /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 		ABFF820E223FDB1D00189E5B /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		ABFFA3032201F8E800EB979C /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AB7D910C2232B8340022056F /* Graph.h */,
+				ABF876BB22788B9F0013BB32 /* AVLTree.h */,
 			);
 			path = NonLinear;
 			sourceTree = "<group>";
